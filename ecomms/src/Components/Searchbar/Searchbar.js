@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import "./searchbar.css";
 
-function Searchbar({ ecomCat }) {
-  const [foundItems, setFoundItems] = useState([]);
+function Searchbar({ handleInput }) {
 
   function searchItem(event) {
     const searchValue = event.target.value;
-    const searchResults = ecomCat.filter((item) => {
-      return item.catagory.toLowerCase().includes(searchValue.toLowerCase());
-    });
-    setFoundItems(searchResults);
+    handleInput(searchValue);
   }
 
   return (

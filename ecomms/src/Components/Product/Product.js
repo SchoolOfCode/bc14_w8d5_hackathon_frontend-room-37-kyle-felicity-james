@@ -1,11 +1,12 @@
 import React from "react";
 
-function Product({ ecomCat }) {
-  console.log(ecomCat);
+function Product({ foundItems }) {
 
-  return (
-    <>
-      {ecomCat.map((item, key) => {
+  if(foundItems)
+  {
+    return (
+        <>
+      {foundItems.map((item, key) => {
         return (
           <div className="productContent">
             <img className="ecomImg" src={item.image} alt={item.discription} />
@@ -15,7 +16,8 @@ function Product({ ecomCat }) {
         );
       })}
     </>
-  );
+    )
+  }
 }
 
 export default Product;
