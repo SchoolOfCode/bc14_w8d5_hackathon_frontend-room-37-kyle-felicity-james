@@ -5,12 +5,19 @@
 }
 
 .App {
+  width: 100%;
+  padding: 0;
   display: grid;
-  flex-direction: column wrap;
   grid-auto-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   font-size: 16px;
   font-weight: 600;
+}
+
+.app-outer
+{
+  width: 2500px;
+  margin: 0 50px 0 50px;
 }
 
 .productContent {

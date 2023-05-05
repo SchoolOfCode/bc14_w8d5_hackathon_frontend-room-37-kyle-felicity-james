@@ -1,4 +1,5 @@
 import React from "react";
+import "./product.css";
 
 function Product({ foundItems }) {
 
@@ -10,7 +11,7 @@ function Product({ foundItems }) {
         return (
           <div className="productContent">
             <img className="ecomImg" src={item.image} alt={item.discription} />
-            <p key={key.id}>{item.title}</p>
+            <p key={key.id} className="prod-title">{item.title}</p>
             <p>£ {item.price}</p>
           </div>
         );

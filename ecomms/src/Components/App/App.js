@@ -33,8 +33,10 @@ function App() {
       <div className="searchContainer">
         <Searchbar ecomCat={ecomCat} handleInput={handleInput} />
       </div>
-      <div className="App">
-        <Product foundItems={foundItems}/>
+      <div className="app-outer">
+        <div className="App">
+          <Product foundItems={foundItems}/>
+        </div>
       </div>
     </>
   );
