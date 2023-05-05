@@ -20,7 +20,6 @@ The learning audit has given us the opportunity to consolidate our knowledge rea
 | Resource  | Link |
 | ------------- |:-------------:|
 | Fake store API      | https://fakestoreapi.com/     |
-
 ---
 
 
