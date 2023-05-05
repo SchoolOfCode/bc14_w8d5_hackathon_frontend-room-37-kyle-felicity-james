@@ -28,14 +28,14 @@ function App() {
     <>
       <div className="navContainer">
         <h1 className="title">Fake Store Api App</h1>
-        <img id="cartImg" src="/Assets/cart.png" alt="trolley"/>
+        <img id="cartImg" src="/Assets/cart.png" alt="trolley" />
       </div>
       <div className="searchContainer">
         <Searchbar ecomCat={ecomCat} handleInput={handleInput} />
       </div>
       <div className="app-outer">
         <div className="App">
-          <Product foundItems={foundItems}/>
+          <Product foundItems={foundItems} />
         </div>
       </div>
     </>
