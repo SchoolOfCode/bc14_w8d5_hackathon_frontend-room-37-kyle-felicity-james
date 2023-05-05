@@ -31,7 +31,7 @@ function App() {
         <img id="cartImg" src="/Assets/cart.png" alt="trolley" />
       </div>
       <div className="searchContainer">
-        <Searchbar ecomCat={ecomCat} handleInput={handleInput} />
+        <Searchbar handleInput={handleInput} />
       </div>
       <div className="app-outer">
         <div className="App">
