@@ -68,15 +68,34 @@
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
+.cartContainer {
+  font-size: 20px;
+}
+
+.cartContainer:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
 #cartImg {
   width: 50px;
   height: 50px;
   margin: 5px;
   margin-right: 20px;
+  margin-bottom: -20px;
 }
 
-#cartImg:hover {
-  transform: scale(1.2);
+#cartLength {
+  width: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #f17300;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
 /* colour F17300 */
