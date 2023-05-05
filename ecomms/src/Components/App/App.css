@@ -98,4 +98,13 @@
   font-size: 14px;
 }
 
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6vh;
+  margin-bottom: 10px;
+}
+
 /* colour F17300 */

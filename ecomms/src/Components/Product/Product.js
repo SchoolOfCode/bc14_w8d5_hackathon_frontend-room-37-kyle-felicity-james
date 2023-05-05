@@ -2,7 +2,6 @@ import React from "react";
 import "./product.css";
 
 function Product({ foundItems, handleAddToCart }) {
-  
   function handleAdd(item) {
     handleAddToCart(item);
   }
