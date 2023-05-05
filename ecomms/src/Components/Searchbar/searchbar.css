@@ -1,0 +1,15 @@
+.searchBar {
+  width: 14vw;
+  height: 4vh;
+  display: flex;
+  border: 2px orange solid;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+#searchImg {
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+}
