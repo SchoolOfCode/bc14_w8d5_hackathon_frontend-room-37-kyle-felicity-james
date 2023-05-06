@@ -1,15 +1,9 @@
 import "./App.css";
-import Product from "../Product/Product";
 import { useEffect, useState } from "react";
-import Searchbar from "../Searchbar/Searchbar";
-import {
-  BrowserRouter as Router,
-  Link,
-  Routes,
-  Route,
-  Outlet,
-} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Cart from "../Cart/Cart";
+import Searchbar from "../Searchbar/Searchbar";
+import Product from "../Product/Product";
 
 function App() {
   const [ecomCat, setEcomcat] = useState([]);
@@ -37,49 +31,66 @@ function App() {
     setFoundItems(searchResults);
   }
 
+  useEffect(() => {
+    const storedCartItems = JSON.parse(localStorage.getItem("cartItems"));
+    if (storedCartItems) {
+      setCartItems(storedCartItems);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
+
+  function handleClearCart() {
+    setCartItems([]);
+    localStorage.removeItem("cartItems");
+  }
+
   function handleAdd(item) {
     const newCartItems = [...cartItems, item];
     setCartItems(newCartItems);
   }
 
   return (
-    <Router>
-      <div className="navContainer">
-        <h1 className="title">Fake Store Api App</h1>
-        <div className="cartContainer">
-          <Link to="../Cart/">
-            <img id="cartImg" src="/Assets/cart.png" alt="trolley" />
-          </Link>
-          <p id="cartLength">{cartItems.length}</p>
-          <p>£ {totalPrice.toFixed(2)}</p>
-        </div>
-      </div>
-      <div className="searchContainer">
-        <Searchbar handleInput={handleInput} />
-      </div>
-      <div className="app-outer">
-        <div className="App">
-          {
-            <Product
-              foundItems={foundItems}
-              handleAddToCart={handleAdd}
-              cartItems={cartItems}
-            />
-          }
-          <div />
-          <Routes>
-            <Route
-              path="../Cart/"
-              element={
-                <Outlet>
-                  <Cart cartItems={cartItems} totalPrice={totalPrice} />
-                </Outlet>
-              }
-            />
-          </Routes>
-        </div>
-      </div>
-    </Router>
+    <Routes>
+      <Route
+        path="/cart"
+        element={
+          <Cart cartItems={cartItems} handleClearCart={handleClearCart} />
+        }
+      />
+      <Route
+        path="/"
+        element={
+          <>
+            <div className="navContainer">
+              <h1 className="title">Fake Store Api App</h1>
+
+              <div className="cartContainer">
+                <a href="/cart">
+                  <img id="cartImg" src="/Assets/cart.png" alt="trolley" />{" "}
+                </a>
+                <p id="cartLength">{cartItems.length}</p>
+                <p>£ {totalPrice.toFixed(2)}</p>
+              </div>
+            </div>
+            <div className="searchContainer">
+              <Searchbar handleInput={handleInput} />
+            </div>
+            <div className="app-outer">
+              <div className="App">
+                <Product
+                  foundItems={foundItems}
+                  handleAddToCart={handleAdd}
+                  cartItems={cartItems}
+                />
+              </div>
+            </div>
+          </>
+        }
+      />
+    </Routes>
   );
 }
 

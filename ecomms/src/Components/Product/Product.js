@@ -10,7 +10,7 @@ function Product({ foundItems, handleAddToCart }) {
     <>
       {foundItems.map((item, key) => {
         return (
-          <div className="productContent" key={key}>
+          <div className="productContent" key={key.id}>
             <img className="ecomImg" src={item.image} alt={item.description} />
             <p className="prod-title">{item.title}</p>
             <p>£ {item.price}</p>

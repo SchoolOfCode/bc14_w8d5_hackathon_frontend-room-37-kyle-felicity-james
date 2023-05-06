@@ -1,19 +1,15 @@
-import React from "react";
-
-function Cart({ cartItems, totalPrice }) {
+function Cart({ totalPrice, cartItems, handleClearCart }) {
   return (
-    <div className="cartPopup">
+    <div>
       <h2>Cart</h2>
-      {cartItems.map((item, key) => {
-        return (
-          <div className="cartContent" key={key}>
-            <img className="ecomImg" src={item.image} alt={item.description} />
-            <p className="prod-title">{item.title}</p>
-            <p>£ {item.price.toFixed(2)}</p>
-          </div>
-        );
-      })}
-      <p>Total Price: £{totalPrice.toFixed(2)}</p>
+      <ul>
+        {cartItems.map((item) => (
+          <li key={item.id}>{item.title}</li>
+        ))}
+      </ul>
+      <p>{cartItems.length} items</p>
+      <p>£ {totalPrice}</p>
+      <button onClick={handleClearCart}>Clear Cart</button>
     </div>
   );
 }
