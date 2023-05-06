@@ -1,6 +1,9 @@
 // import Product from "../Product/Product";
 
-function Cart({ totalPrice, cartItems, handleClearCart, item }) {
+function Cart({ cartItems, handleClearCart }) {
+  const totalPrice = cartItems.reduce((total, item) => {
+    return total + item.price;
+  }, 0);
   return (
     <>
       <a href="/">
@@ -18,7 +21,7 @@ function Cart({ totalPrice, cartItems, handleClearCart, item }) {
           ))}
         </ul>
         <p>{cartItems.length} items</p>
-        <p>£ {totalPrice}</p>
+        <p>£ {totalPrice.toFixed(2)}</p>
         <div className="clear-buyButtons">
           <button onClick={handleClearCart}>Clear Cart</button>
           <button>Buy Now</button>
