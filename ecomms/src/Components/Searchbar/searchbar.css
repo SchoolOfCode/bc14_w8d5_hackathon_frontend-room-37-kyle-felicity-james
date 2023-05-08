@@ -1,0 +1,33 @@
+.searchBar {
+  width: 14vw;
+  height: 4vh;
+  display: flex;
+  border: 2px orange solid;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+#searchImg {
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+}
+
+.btn {
+  width: 150px;
+  height: 40px;
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}

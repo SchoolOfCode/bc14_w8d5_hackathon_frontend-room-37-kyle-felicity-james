@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+html {
+  height: 100%;
+  overflow: auto;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.App {
+  padding: 0;
+  display: grid;
+  grid-auto-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 16px;
+  font-weight: 600;
+  gap: -20px; /* Add desired spacing between grid items */
+}
+
+.app-outer {
+  width: 100%;
+  /* margin: 0 50px 0 50px; */
+}
+
+.productContent {
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.productContent:hover {
+  border: #f17300 2px solid;
+  border-radius: 20px;
+  background-color: #f174004f;
+}
+
+.ecomImg {
+  width: 20%;
+  max-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* mix-blend-mode: multiply; */
+}
+
+/* .ecomImg:hover {
+  transform: scale(1.2);
+  mix-blend-mode: color;
+} */
+
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 22vh;
+  margin-bottom: 1px;
+}
+
+.navContainer {
+  position: fixed;
+  display: flex;
+  width: 98%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #f17300;
+  background-color: #f17300;
+  margin-bottom: 10px;
+  padding: 25px;
+  color: #ffffff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.cartContainer {
+  font-size: 20px;
+}
+
+.cartContainer:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+#cartImg {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  margin-right: 20px;
+  margin-bottom: -20px;
+}
+
+#cartLength {
+  width: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #f17300;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6vh;
+  margin-bottom: 10px;
+}
+
+/* colour F17300 */

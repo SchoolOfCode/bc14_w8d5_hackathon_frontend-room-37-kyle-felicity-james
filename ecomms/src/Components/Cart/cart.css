@@ -1,0 +1,91 @@
+.cartNavBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 35px;
+  background-color: #f17300;
+}
+.cartNavBar img {
+  margin-left: 1rem;
+  margin-top: 2rem;
+  width: 50px;
+  height: 50px;
+}
+
+#carth2 {
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f17300;
+  margin-left: 1rem;
+}
+
+.small-OverlayBox {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vh;
+  max-width: 100%;
+  max-height: 600px;
+  background-color: rgba(0, 0, 0, 0.027);
+  border-radius: 24px;
+  z-index: 100;
+  display: grid;
+  grid-row-start: 1rem;
+  padding: 1rem 2rem;
+  color: #f1740083;
+  overflow-y: auto;
+}
+
+.cartImg {
+  width: 50px;
+  height: 50px;
+  top: 12px;
+  margin-left: 4rem;
+}
+
+.griidItems {
+  display: grid;
+  grid-auto-rows: 1fr 1fr 1fr;
+  /* display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  padding: 1rem 2rem; */
+}
+
+.clear-buyButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  margin-top: 1rem;
+  gap: -3rem;
+  align-items: center;
+}
+
+.borderLine {
+  border-bottom: 1px solid #f17300;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cart3d {
+  /* Adjust the width and height as needed */
+  width: 600px;
+  height: 400px;
+  /* Add any additional styles for the cart container */
+}
+
+.canvas-container {
+  /* Adjust the width and height as needed */
+  width: 100%;
+  height: 100%;
+  /* Add any additional styles for the canvas container */
+}
