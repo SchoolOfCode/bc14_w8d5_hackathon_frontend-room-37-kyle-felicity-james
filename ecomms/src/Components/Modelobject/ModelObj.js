@@ -6,7 +6,6 @@ function Model(props) {
   const groupRef = useRef(); // Create a ref for the group element
 
   const { nodes, materials } = useGLTF("/modelDraco.gltf");
-
   useFrame(() => {
     if (groupRef.current) {
       groupRef.current.rotation.y += 0.01; // Adjust the rotation speed as needed
