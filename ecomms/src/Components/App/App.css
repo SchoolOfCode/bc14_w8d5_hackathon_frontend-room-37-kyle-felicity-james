@@ -4,6 +4,18 @@
   text-align: center;
 }
 
+html {
+  height: 100%;
+  overflow: auto;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
 .App {
   padding: 0;
   display: grid;
@@ -11,6 +23,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   font-size: 16px;
   font-weight: 600;
+  gap: -20px; /* Add desired spacing between grid items */
 }
 
 .app-outer {
@@ -19,6 +32,7 @@
 }
 
 .productContent {
+  max-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,7 +51,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  mix-blend-mode: multiply;
+  /* mix-blend-mode: multiply; */
 }
 
 /* .ecomImg:hover {
@@ -50,12 +64,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 6vh;
-  margin-bottom: 10px;
+  padding: 22vh;
+  margin-bottom: 1px;
 }
 
 .navContainer {
+  position: fixed;
   display: flex;
+  width: 98%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;

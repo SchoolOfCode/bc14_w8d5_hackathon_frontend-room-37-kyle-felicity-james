@@ -4,6 +4,9 @@ import { Routes, Route } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import Searchbar from "../Searchbar/Searchbar";
 import Product from "../Product/Product";
+import { Canvas } from "react-three-fiber";
+import { OrbitControls } from "@react-three/drei";
+import Model from "../Modelobject/ModelObj";
 
 function App() {
   const [ecomCat, setEcomcat] = useState([]);
@@ -78,6 +81,22 @@ function App() {
             <div className="searchContainer">
               <Searchbar handleInput={handleInput} />
             </div>
+            <Canvas
+              style={{
+                position: "fixed",
+                top: 0,
+                left: 0,
+                zIndex: -1,
+                transform: "translate(-10px, -20px)",
+              }}
+            >
+              <OrbitControls />
+              <ambientLight intensity={1} />
+              <spotLight position={[10, 15, 10]} angle={Math.PI / 3} />
+              {/*Math.PI is to do with the radius and circumference of a circle  */}
+              <pointLight position={[-10, -10, -10]} />
+              <Model scale={[0.212, 0.212, 0.212]} />
+            </Canvas>
             <div className="app-outer">
               <div className="App">
                 <Product

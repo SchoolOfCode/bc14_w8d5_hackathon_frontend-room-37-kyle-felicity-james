@@ -1,4 +1,7 @@
-.prod-title
-{
-    width: 250px;
+.prod-title {
+  width: 260px;
+}
+
+.btn {
+  position: relative;
 }
